@@ -2,8 +2,17 @@
 
 List of one off scripts and things.
 
+* [colorchars](https://github.com/miku/oneoff#colorchars)
 * [tarcheck](https://github.com/miku/oneoff#tarcheck)
 * [webshare](https://github.com/miku/oneoff#webshare)
+
+----
+
+## colorchars
+
+Just because.
+
+* [https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png](https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png)
 
 ## tarcheck
 
