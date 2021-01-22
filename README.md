@@ -2,8 +2,8 @@
 
 List of one off scripts and things.
 
-* tarcheck
-* webshare
+* [tarcheck](https://github.com/miku/oneoff#tarcheck)
+* [webshare](https://github.com/miku/oneoff#webshare)
 
 ## tarcheck
 
