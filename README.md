@@ -14,6 +14,12 @@ Just because.
 
 * [https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png](https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png)
 
+## moderare
+
+Slow down output.
+
+* [https://gist.github.com/miku/27cec558c6f8f8cf3a6d78ab2e247598](https://gist.github.com/miku/27cec558c6f8f8cf3a6d78ab2e247598)
+
 ## tarcheck
 
 Mass tar checker.
