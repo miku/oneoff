@@ -3,6 +3,7 @@
 List of one off scripts and things.
 
 * [colorchars](https://github.com/miku/oneoff#colorchars)
+* [moderare](https://github.com/miku/oneoff#moderare)
 * [tarcheck](https://github.com/miku/oneoff#tarcheck)
 * [webshare](https://github.com/miku/oneoff#webshare)
 
