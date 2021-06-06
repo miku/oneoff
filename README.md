@@ -3,6 +3,7 @@
 List of one off scripts and things.
 
 * [colorchars](https://github.com/miku/oneoff#colorchars)
+* [dijkstra65](https://github.com/miku/oneoff#dijkstra65)
 * [moderare](https://github.com/miku/oneoff#moderare)
 * [tarcheck](https://github.com/miku/oneoff#tarcheck)
 * [webshare](https://github.com/miku/oneoff#webshare)
@@ -14,6 +15,12 @@ List of one off scripts and things.
 Just because.
 
 * [https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png](https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png)
+
+## dijkstra65
+
+Go version of Paper "Solution of a problem in concurrent programming control" (1965)
+
+* https://gist.github.com/miku/18d13ab0c7de09120a26f8ebe153ad27
 
 ## moderare
 
