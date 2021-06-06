@@ -6,6 +6,8 @@ List of one off scripts and things that fit in a single file.
 $ go get github.com/miku/oneoff/cmd/webshare
 ```
 
+![](static/418606.gif)
+
 ## Gists
 
 * [colorchars](https://gist.github.com/miku/339a2ad63623b08da449bfdab3bd680a#file-make-png)
