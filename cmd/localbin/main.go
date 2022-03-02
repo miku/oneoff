@@ -17,13 +17,13 @@ func debugHandler(w http.ResponseWriter, r *http.Request) {
 		logErr(w, r, err, http.StatusInternalServerError)
 		return
 	}
-	log.Printf("\u001b[35m>>> request dump follows\u001b[0m")
+	log.Printf("\u001b[35m--------8<-------- request dump follows --------8<--------\u001b[0m")
 	mw := io.MultiWriter(os.Stderr, w)
 	if _, err := mw.Write(append(b, []byte("\n")...)); err != nil {
 		logErr(w, r, err, http.StatusInternalServerError)
 		return
 	}
-	log.Printf("\u001b[34m>>> EOM\u001b[0m")
+	log.Printf("\u001b[34m--------8<-------- EOM --------8<--------\u001b[0m")
 }
 
 func logErr(w http.ResponseWriter, r *http.Request, err error, status int) {
