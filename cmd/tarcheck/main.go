@@ -3,7 +3,6 @@ package main
 import (
 	"archive/tar"
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -39,7 +38,7 @@ func main() {
 				break // End of archive
 			}
 			if err != nil {
-				result.Errs = append(result.Errs, fmt.Sprintf("%v", err))
+				result.Errs = append(result.Errs, err.Error())
 				break
 			}
 			if hdr == nil {
