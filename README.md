@@ -16,3 +16,4 @@ $ go get github.com/miku/oneoff/cmd/webshare
 * [tarcheck](https://gist.github.com/miku/065a94e92508a27c3f17445115f84dc4#tarcheck)
 * [webshare](https://gist.github.com/miku/b5d856ef96a1f78530d8abbeb8f4d13d#file-webshare-md)
 * [localbin](https://gist.github.com/miku/df72bd47f5509d1e9a1c6bdd659a2ce0)
+* [uppsala](https://github.com/miku/oneoff/tree/main/cmd/uppsala/main.go)
