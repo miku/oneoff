@@ -23,12 +23,12 @@ func main() {
 	flag.Parse()
 	pp := parallel.NewProcessor(os.Stdin, os.Stdout, func(p []byte) ([]byte, error) {
 		s := strings.TrimSpace(string(p))
-		_, err := url.Parse(string(p))
+		_, err := url.Parse(s)
 		if err == nil {
 			return p, nil
 		}
 		if *debug {
-			fmt.Fprintf(os.Stderr, "failed: %s\n", s)
+			fmt.Fprintf(os.Stderr, "failed with %v: %s\n", err, s)
 		}
 		return nil, nil
 	})
