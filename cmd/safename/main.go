@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/sha1"
+	"encoding/hex"
 	"flag"
 	"fmt"
 	"os"
@@ -12,7 +14,6 @@ import (
 var (
 	dryRun    = flag.Bool("d", false, "show what would be renamed without actually renaming")
 	recursive = flag.Bool("r", false, "process directories recursively")
-
 	patAlnum  = regexp.MustCompile("[^a-zA-Z0-9_-]")
 	patDashes = regexp.MustCompile("[_-]{2,}")
 )
@@ -54,18 +55,21 @@ func renameToSafe(filePath string, dryRun bool) {
 		name     = strings.TrimSuffix(filename, ext)
 		safeName = toSafeName(name)
 	)
-	// XXX: use sha1 of the original filename to distinguish between different
-	// files.
+
+	// If safe name would be empty, use sha1 hash of the original filename
 	if safeName == "" {
-		safeName = "file"
+		safeName = getSHA1Hash(filename)
 	}
+
 	var (
 		newFilename = safeName + ext
 		newPath     = filepath.Join(dir, newFilename)
 	)
+
 	if filename == newFilename {
 		return
 	}
+
 	fmt.Fprintf(os.Stderr, "renaming: '%s' to '%s'\n", filePath, newPath)
 	if !dryRun {
 		err := os.Rename(filePath, newPath)
@@ -73,6 +77,12 @@ func renameToSafe(filePath string, dryRun bool) {
 			fmt.Fprintf(os.Stderr, "Error renaming '%s': %v\n", filePath, err)
 		}
 	}
+}
+
+func getSHA1Hash(text string) string {
+	hash := sha1.New()
+	hash.Write([]byte(text))
+	return hex.EncodeToString(hash.Sum(nil))
 }
 
 func toSafeName(name string) string {
@@ -87,9 +97,9 @@ func toSafeName(name string) string {
 		}
 		return r
 	}, name)
+
 	name = patAlnum.ReplaceAllString(name, "")
 	name = strings.ToLower(name)
-	reg = patDashes.MustCompile("[_-]{2,}")
-	name = reg.ReplaceAllString(name, "_")
+	name = patDashes.ReplaceAllString(name, "_")
 	return name
 }

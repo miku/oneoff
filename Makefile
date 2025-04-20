@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-TARGETS := colorchars dijkstra65 slowdown tarcheck webshare localbin uppsala
+TARGETS := colorchars dijkstra65 slowdown tarcheck webshare localbin uppsala safename
 
 .PHONY: all
 all: $(TARGETS)
